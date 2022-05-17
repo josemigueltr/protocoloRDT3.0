@@ -4,6 +4,9 @@ import copy
 from random import random
 from enum import Enum
 
+from sympy import python
+
+
 verbose = 3
 proba_perdida = 0.4
 proba_corrup = 0.3
@@ -14,44 +17,149 @@ time = 0.0
 tiempo_mensajes = 15.0
 total_mensajes = 5
 eventos = []
+estado_A=''
+estado_B=''
+ultimo_paquete=None
+ultima_secuencia=None
+secuencia=0
+
 
 def A_salida(mensaje):
-    if estado_A!='ESPERANDO':
-        num_sec= 0 1
+    global ultimo_paquete
+    global ultima_secuencia
+    global secuencia
+    global estado_A
+    
+    if estado_A!='ESPERANDO_ACK':
+
+        num_sec = secuencia
         #Preguntar que es ack_num
-        ack_num=
+        ack_num= secuencia
+        ultima_secuencia=secuencia
         payload=mensaje.datos
-        checksum=
+        checksum=getChecksum(mensaje.datos)
         paquete=Paquete(num_sec,ack_num,payload,checksum)
+        ultimo_paquete=python.deepcopy(paquete)
         a_capa_3(Entidad.ALICIA,paquete)
         startimer(Entidad.ALICIA,tiempo_mensajes)
-        estado_A='ESPERANDO'
+        estado_A='ESPERANDO_ACK'
+        secuencia=not secuencia
 
 
 def A_entrada(paquete):
-    #Mensajes ack o nack
-    #Si recibimos ack pasamos al estado no esperando
-    #si recibimos nack  ¿Que hacemos? mandamos a llamar a interrup timer para reeenviar el paquete
-    pass
+    global estado_A
+    global ultimo_paquete
+    #recibo un paquete nack
+    if(paquete.ack_num<0):
+        a_capa_3(Entidad.ALICIA,ultimo_paquete)
+    #recibo un paquete ack
+    else:
+        estado_A='ESPERANDO_LLAMADA'
 
 def A_interrup_timer():
-    #Preguntar si se hace de manera automatica
-    pass
+    global ultimo_paquete
+    a_capa_3(Entidad.ALICIA,ultimo_paquete)
 
 def A_init():
-    #inicializar estados 
+    global estado_A
+    estado_A='ESPERANDO_LLAMADA'
     pass
 
 def B_entrada(paquete):
-    #Revisar si el paquete esta conrrompido o no
-    #Si esta corrompido mandar mensaje nack
-    #Si no esta corrompido mandar mensaje ack
-    #como mandamos el mensaje ack o nack
-    pass
+    global ultima_secuencia
+    #Checo si el contenido del paquete es igual al checksum
+    if(validChecksum(paquete.payload,paquete.checksum)):
+        if(paquete.num_sec==ultima_secuencia):
+            payload=''
+            checsum_ack=getChecksum(payload,paquete.num_sec,paquete.ack_num)
+            ack_p=Paquete(paquete.num_sec,paquete.ack_num,payload,checsum_ack)
+            a_capa_3(Entidad.BARTOLO,ack_p)
+    else:
+        #Si no es valido mando un nack
+        payload=''
+        ##numeros negativos para nack
+        ## 0 -1 1 -2
+        nack_num=-1 if paquete.ack_num==0 else -2
+        checsum_nack=getChecksum(payload,paquete.num_sec,nack_num)
+        nack_p=Paquete(paquete.num_sec,nack_num,payload,checsum_nack)
+        a_capa_3(Entidad.BARTOLO,nack_p)
 
 def B_init():
     #inicializar estados
+    global estado_B
+    estado_B='ESPERANDO_LLAMADA'
     pass
+
+
+def validChecksum(payload,Checksum):
+    """
+    Funcion que revisa si el checksum  y el contenido de un paquete son validos
+    """
+    k=8
+    c1 = payload[0:k]
+    c2 = payload[k:2*k]
+    c3 = payload[2*k:3*k]
+    c4 = payload[3*k:4*k]
+ 
+    # Calculating the binary sum of packets + checksum
+    ReceiverSum = bin(int(c1, 2)+int(c2, 2)+int(Checksum, 2) +
+                      int(c3, 2)+int(c4, 2)+int(Checksum, 2))[2:]
+ 
+    # Adding the overflow bits
+    if(len(ReceiverSum) > k):
+        x = len(ReceiverSum)-k
+        ReceiverSum = bin(int(ReceiverSum[0:x], 2)+int(ReceiverSum[x:], 2))[2:]
+ 
+    # Calculating the complement of sum
+    ReceiverChecksum = ''
+    for i in ReceiverSum:
+        if(i == '1'):
+            ReceiverChecksum += '0'
+        else:
+            ReceiverChecksum += '1'
+    finalsum=bin(int(Checksum,2)+int(ReceiverChecksum,2))[2:]
+    finalcomp=''
+    for i in finalsum:
+        if(i == '1'):
+            finalcomp += '0'
+        else:
+            finalcomp += '1'
+    ## Si se complementan regresamos  true
+    if(int(finalcomp,2) == 0):
+        return True
+    else:
+        return False
+
+def getChecksum(SentMessage):
+    k=8
+    """
+    Funcion que calcula el checksum de un mensaje
+    """
+    # Seccionamos el mensaje en 4 partes para la generacion del checksum
+    c1 = SentMessage[0:k]
+    c2 = SentMessage[k:2*k]
+    c3 = SentMessage[2*k:3*k]
+    c4 = SentMessage[3*k:4*k]
+ 
+    # Calculating the binary sum of packets
+    Sum = bin(int(c1, 2)+int(c2, 2)+int(c3, 2)+int(c4, 2))[2:]
+ 
+    # Adding the overflow bits
+    if(len(Sum) > k):
+        x = len(Sum)-k
+        Sum = bin(int(Sum[0:x], 2)+int(Sum[x:], 2))[2:]
+    if(len(Sum) < k):
+        Sum = '0'*(k-len(Sum))+Sum
+ 
+    # Calculating the complement of sum
+    Checksum = ''
+    for i in Sum:
+        if(i == '1'):
+            Checksum += '0'
+        else:
+            Checksum += '1'
+    return Checksum
+
 
 
 # Mensaje de la capa de aplicación
@@ -208,8 +316,7 @@ def main():
             nsim += 1
             if evento.entidad == Entidad.ALICIA:
                 A_salida(msj)
-            else:
-                B_salida(msj)
+            
         elif evento.tipo == TipoEvento.DESDE_CAPA_3:
             paquete = Paquete()
             paquete.num_secuencia = evento.paquete.num_secuencia
@@ -223,8 +330,7 @@ def main():
         elif evento.tipo == TipoEvento.INTERRUP_TIMER:
             if evento.entidad == Entidad.ALICIA:
                 A_interrup_timer()
-            else:
-                B_interrup_timer()
+           
         else:
             print('INTERNAL PANIC: evento desconocido')
 
