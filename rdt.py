@@ -6,13 +6,13 @@ from enum import Enum
 
 verbose = 3
 proba_perdida = 0.5
-proba_corrup = 0.4
+proba_corrup = 1
 num_paq_perdidos = 0
 num_paq_corromp = 0
 num_paq_acapa3 = 0
 time = 0.0
 tiempo_mensajes = 1.0
-total_mensajes = 10
+total_mensajes = 20
 eventos = []
 secuencia=0
 
@@ -41,9 +41,12 @@ def A_salida(mensaje):
 def A_entrada(paquete):
     global secuencia
     #REvisamos que le paquete recibido este correcto
+    print('########################')
+    print(paquete)
+    print('########################')
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
         #Recibimos una nack
-        if paquete.num_secuencia < 0:
+        if paquete.num_ack > 1:
             print("-------------------------------------------------------")
             print("SE RECIBIO UN NACK, ... REENVIANDO PAQUETE")
             print("-------------------------------------------------------")
@@ -86,7 +89,7 @@ def B_entrada(paquete):
             return
         print(f"PAQUETE CORRECTO ...  MANDANDO ACK" )
         #mandamos un ack
-        p_ack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=paquete.num_ack, checksum=get_checksum(paquete.payload, num_ack=paquete.num_ack, num_secuencia=paquete.num_secuencia), payload="")
+        p_ack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=paquete.num_ack, checksum=get_checksum(paquete.payload, num_ack=paquete.num_ack, num_secuencia=paquete.num_secuencia), payload=b' ')
         a_capa_3(Entidad.BARTOLO, p_ack)
         a_capa_5(Entidad.BARTOLO, Mensaje(paquete.payload))
     else:
@@ -96,8 +99,8 @@ def B_entrada(paquete):
         print("-------------------------------------------------------")
         #Numeros negativos para detectar mensajes nack
         # -1 --> 0  -2 --> 1  
-        num_nack=-1 if paquete.num_ack ==0 else -2
-        p_nack = Paquete(num_secuencia=secuencia, num_ack=num_nack, checksum=get_checksum(paquete.payload, num_ack=secuencia, num_secuencia=secuencia), payload="")
+        num_nack=2 if paquete.num_ack ==0 else 3
+        p_nack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=num_nack, checksum=get_checksum(paquete.payload, num_ack=secuencia, num_secuencia=secuencia), payload=b' ')
         a_capa_3(Entidad.BARTOLO, p_nack)
    
 
@@ -236,10 +239,10 @@ def a_capa_3(entidad, paquete):
     if random() < proba_corrup:
         num_paq_corromp += 1
         x = random()
-        if x < 0.75:
+        if x < .75:
             mi_paquete.payload = b'#'+mi_paquete.payload[1:]
         elif x < 0.875:
-            mi_paquete.num_secuencia = 3
+            mi_paquete.num_secuencia = 6
         else:
             mi_paquete.num_ack = 3
         if verbose > 0:
