@@ -1,0 +1,139 @@
+
+EVENTO tiempo: 1.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 2.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 2.83   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 3.45   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 3.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 4.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 4.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 5.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 6.01   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 6.11   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 6.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 6.86   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 7.05   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 7.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 7.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 8.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 8.98   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
+
+-------------------------------------------------------
+PAQUETE RECIBIDO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 9.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 9.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 10.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 10.96   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 11.21   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 11.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 12.15   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 12.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 12.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 13.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 14.19   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 14.60   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 14.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 15.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 15.99   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 16.33   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
+
+-------------------------------------------------------
+PAQUETE RECIBIDO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 16.37   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 16.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 17.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 18.15   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 18.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 19.47   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 19.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 20.80   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+
+EVENTO tiempo: 21.40   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

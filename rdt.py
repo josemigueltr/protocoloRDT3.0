@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import copy
-from random import random
+from random import randint, random
 from enum import Enum
 
-verbose = 3
-proba_perdida = 0.5
-proba_corrup = 1
+verbose = 2
+proba_perdida = 0.3
+proba_corrup = 0.2
 num_paq_perdidos = 0
 num_paq_corromp = 0
 num_paq_acapa3 = 0
@@ -16,13 +16,29 @@ total_mensajes = 20
 eventos = []
 secuencia=0
 
+
+def get_checksum(payload, num_ack, num_secuencia):
+    payload = payload.decode(encoding='UTF-8')
+    l = len(payload)
+    #Hacemos que la longitud de la cadena sea multiplo de 2
+    l=l-1 if l%2!=0 else l    
+    # Al empezar la suma agregamos el numero de scuencia y el numero de ack
+    sum = (ord(str(num_ack))) + (ord(str(num_secuencia)))
+    #Agregamos los caracteres del payload al sum
+    for i in reversed(range(0,l+1,2)):
+        if(i==0):
+            break
+        sum += (ord(payload[i-2 + 1]) << 8) + ord(payload[i-2])
+    #Manejamos el desbordamiento y sacamos complemento a 1
+    resultado = (~ (sum >> 16) + (sum & 0xffff)) & 0xffff
+    return bin(resultado >> 8 | ((resultado & 0xff) << 8))
+
+
 class Alicia():
-    """
-    Clase para representar a Alicia
-    """
     def __init__(self, estado,  ultimo_paquete):
         self.estado = estado
         self.ultimo_paquete = ultimo_paquete
+
 
 def A_salida(mensaje):
     global secuencia
@@ -34,9 +50,9 @@ def A_salida(mensaje):
         a.ultimo_paquete = paquete
         a_capa_3(Entidad.ALICIA, paquete)
         startimer(Entidad.ALICIA, tiempo_mensajes)
-        print("-------------------------------------------------------")
+        print("\n-------------------------------------------------------")
         print(f"PAQUETE ENVIADO ...")
-        print("-------------------------------------------------------")
+        print("-------------------------------------------------------\n")
 
 def A_entrada(paquete):
     global secuencia
@@ -45,25 +61,25 @@ def A_entrada(paquete):
     print(paquete)
     print('########################')
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
-        #Recibimos una nack
-        if paquete.num_ack > 1:
-            print("-------------------------------------------------------")
-            print("SE RECIBIO UN NACK, ... REENVIANDO PAQUETE")
-            print("-------------------------------------------------------")
-            a_capa_3(Entidad.ALICIA, a.ultimo_paquete)
+        #El numero de secuencia es distinto o es duplicado
+        if paquete.num_ack !=secuencia:
+            print("\n-------------------------------------------------------")
+            print("SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO")
+            print("-------------------------------------------------------\n")
+            
         #recibimos un ack
         else:
-            print("-------------------------------------------------------")
+            print("\n-------------------------------------------------------")
             print("SE RECIBIO UN PAQUETE DE CONFIRMACION ACK")
-            print("-------------------------------------------------------")
+            print("-------------------------------------------------------\n")
             a.estado = 'ESPERANDO_LLAMADA'
             secuencia = (secuencia + 1 ) % 2
+            stoptimer(Entidad.ALICIA)
     #Se recibe un paquete corrupto        
     else:
-        print("-------------------------------------------------------")
-        print("SE RECIBIO UN PAQUETE CORRUPTO, ... REENVIANDO PAQUETE")
-        print("-------------------------------------------------------")
-        a_capa_3(Entidad.ALICIA, a.ultimo_paquete)
+        print("\n-------------------------------------------------------")
+        print("SE RECIBIO UN PAQUETE CORRUPTO")
+        print("-------------------------------------------------------\n")
 
 def A_interrup_timer():
     #Si se acabo el tiempo del timer volvemos a inicializarlo y a esperar
@@ -76,31 +92,34 @@ def A_init():
 
 def B_entrada(paquete):
     global secuencia
-    print("-------------------------------------------------------")
+    print("\n-------------------------------------------------------")
     print(f"PAQUETE RECIBIDO")
-    print("-------------------------------------------------------")
+    print("-------------------------------------------------------\n")
     #Revisamos que el paquete halla llegado bien 
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
-        #Revisamos que la secuencia del paquete sea la correcta
+        #Revisamos que la secuencia del paquete sea la correcta(duplicado)
         if paquete.num_secuencia != secuencia:
-            print("-------------------------------------------------------")
-            print("SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA")
-            print("-------------------------------------------------------")
+            print("\n-------------------------------------------------------")
+            print("SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO")
+            print("-------------------------------------------------------\n")
+            num_nack=1 if paquete.num_ack ==0 else 0
+            p_nack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=num_nack, checksum=get_checksum(b' ', num_ack=num_nack, num_secuencia=paquete.num_secuencia), payload=b' ')
+            a_capa_3(Entidad.BARTOLO, p_nack)
             return
+        print("\n-------------------------------------------------------")    
         print(f"PAQUETE CORRECTO ...  MANDANDO ACK" )
+        print("-------------------------------------------------------\n")
         #mandamos un ack
-        p_ack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=paquete.num_ack, checksum=get_checksum(paquete.payload, num_ack=paquete.num_ack, num_secuencia=paquete.num_secuencia), payload=b' ')
+        p_ack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=paquete.num_ack, checksum=get_checksum(b' ', num_ack=paquete.num_ack, num_secuencia=paquete.num_secuencia), payload=b' ')
         a_capa_3(Entidad.BARTOLO, p_ack)
         a_capa_5(Entidad.BARTOLO, Mensaje(paquete.payload))
     else:
-        #Mandamos nack si el paquete es corrupto
-        print("-------------------------------------------------------")
-        print("PAQUETE CORRUPTO ... MANDANDO NACK")
-        print("-------------------------------------------------------")
-        #Numeros negativos para detectar mensajes nack
-        # -1 --> 0  -2 --> 1  
-        num_nack=2 if paquete.num_ack ==0 else 3
-        p_nack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=num_nack, checksum=get_checksum(paquete.payload, num_ack=secuencia, num_secuencia=secuencia), payload=b' ')
+        #Mandamos un ack con el numero de secuencia contrario si el paquete es corrupto
+        print("\n-------------------------------------------------------")
+        print("PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO")
+        print("-------------------------------------------------------\n")
+        num_nack=1 if paquete.num_ack ==0 else 0
+        p_nack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=num_nack, checksum=get_checksum(b' ', num_ack=num_nack, num_secuencia=paquete.num_secuencia), payload=b' ')
         a_capa_3(Entidad.BARTOLO, p_nack)
    
 
@@ -177,12 +196,6 @@ def generar_sig_llegada():
     agregar_evento(evento)
         
 def startimer(entidad, incremento):
-    """
-    Donde entidad puede ser ALICIA o BARTOLO e incremento
-    corresponde al tiempo de duración del temporizador. Cada entidad solo puede iniciar o terminar
-    su propio temporizador (i.e. las funciones de BARTOLO no deben llamar esta función con
-    ALICIA como parámetro).
-    """
     if verbose > 2:
         print(f'          START TIMER> empieza en el tiempo {time:.2f}')
     for evento in eventos:
@@ -196,11 +209,6 @@ def startimer(entidad, incremento):
     agregar_evento(evento)
     
 def stoptimer(entidad):
-    """
-    Donde entidad puede ser ALICIA o BARTOLO. Detiene el temporizador.
-    No es necesario llamar a esta función cuando el temporizador termina su tiempo de duración, de
-    eso se encarga el simulador.
-    """
     if verbose > 2:
         print(f'          STOP TIMER: deteniendo en tiempo {time:.2f}')
     for evento in eventos:
@@ -211,10 +219,6 @@ def stoptimer(entidad):
     
 
 def a_capa_3(entidad, paquete):
-    """
-    Esta función entrega el paquete a la capa 3 que será enviado a la
-    otra entidad. Por ejemplo, si entidad es ALICIA entonces el mensaje será entregado a BARTOLO.
-    """
     lastime = 0.0
     global num_paq_perdidos, num_paq_corromp, num_paq_acapa3
     num_paq_acapa3 += 1
@@ -242,9 +246,11 @@ def a_capa_3(entidad, paquete):
         if x < .75:
             mi_paquete.payload = b'#'+mi_paquete.payload[1:]
         elif x < 0.875:
-            mi_paquete.num_secuencia = 6
+            #random entre 0 y 255
+            mi_paquete.num_secuencia = randint(0, 9)
         else:
-            mi_paquete.num_ack = 3
+            #random entre 0 y 255
+            mi_paquete.num_ack = randint(0, 9)
         if verbose > 0:
             print('          A CAPA 3 > paquete corrompido')
     if verbose > 2:
@@ -253,49 +259,9 @@ def a_capa_3(entidad, paquete):
     return None
 
 def a_capa_5(entidad, mensaje):
-    """
-    Esta función entrega el mensaje a la capa 5 de la entidad receptora.
-    Ya que en esta práctica solamente BARTOLO fungirá como receptor, no se usará la función
-    con ALICIA como argumento.
-    """
     if verbose > 2:
         print(f'          A CAPA 5 > se recibieron los datos: {mensaje.datos.decode()}')
 
-def get_checksum(data, num_ack, num_secuencia):
-    """
-    Método que obtiene el checksum de la información.
-    Decidimos pasar la información a cadena para poder trabajar más fácilmente
-    sobre caracter por caracter
-    """
-    # Pasamos los bytes a cadena para trabajarlo como char
-    data = data.decode(encoding='UTF-8')
-    # Obtenemos la longitud de la cadena
-    i = len(data)
-    # Si la longitud es impar, entonces le restamos uno para
-    # poder agruparlos dos a dos
-    if (i & 1):
-        # Restamos uno a la posición donde estábamos
-        i -= 1
-        # Y obtenemos el unicode que equivale al último caracter
-        suma = ord(data[i])
-    else:
-        suma = 0
-    # Agregamos la suma del num_ack y del num_secuencia
-    suma = (ord(str(num_ack))) + (ord(str(num_secuencia)))
-    # Para cada dos char vamos sumando sus valores en entero
-    # y guardamos el resultado en sum
-    while i > 0:
-        i -= 2
-        suma += (ord(data[i + 1]) << 8) + ord(data[i])
-    # Si hay desbordamiento, entonces se acarrea sobre el bit
-    # de menor peso
-    suma = (suma >> 16) + (suma & 0xffff)
-    # Calculamos el complemento a uno
-    resultado = (~ suma) & 0xffff
-    # Ordenamos correctamente el resultado
-    resultado = resultado >> 8 | ((resultado & 0xff) << 8)
-    # Devolvemos el binario
-    return bin(resultado)
 
 a= A_init()
 
