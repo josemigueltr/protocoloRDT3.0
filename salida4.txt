@@ -1,44 +1,58 @@
 
-EVENTO tiempo: 7.29   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 4.93   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
             PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
-          A CAPA 3 > paquete corrompido
 
 -------------------------------------------------------
 PAQUETE ENVIADO ...
 -------------------------------------------------------
 
 
-EVENTO tiempo: 12.19   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'#aaaaaaaaaaaaaaaaaaa')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 14.26   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 6.30   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 17.29   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+EVENTO tiempo: 9.62   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 13.04   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 14.61   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 14.93   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
 
 -------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 19.41   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
+EVENTO tiempo: 17.47   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b10011011001110   payload: b'aaaaaaaaaaaaaaaaaaaa')
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -47,44 +61,10 @@ PAQUETE CORRECTO ...  MANDANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 19.69   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 7   checksum: 0b110000000000000   payload: b' ')
+EVENTO tiempo: 20.74   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CORRUPTO
--------------------------------------------------------
-
-
-EVENTO tiempo: 21.57   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 24.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 27.29   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 28.31   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -93,114 +73,54 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 33.34   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 22.00   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+          A CAPA 3 > se perdió el paquete
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 29.00   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 32.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
             PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
 
 -------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 35.68   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 39.28   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 43.01   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 43.34   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
 -------------------------------------------------------
 
+          A CAPA 3 > paquete corrompido
 
-EVENTO tiempo: 47.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 33.11   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'#eeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 34.64   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 49.85   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+EVENTO tiempo: 36.72   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 51.99   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 54.77   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 56.36   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 58.23   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 63.56   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -209,46 +129,71 @@ SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 64.71   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1000000100101000   payload: b'jjjjjjjjjjjjjjjjjjjj')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 65.29   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 39.18   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 65.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 41.16   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 69.53   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 42.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 51.15   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 72.51   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 52.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 57.19   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 73.41   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1000000100101000   payload: b'jjjjjjjjjjjjjjjjjjjj')
+EVENTO tiempo: 60.58   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 62.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 64.56   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -258,63 +203,116 @@ PAQUETE CORRECTO ...  MANDANDO ACK
 
           A CAPA 3 > se perdió el paquete
 
-EVENTO tiempo: 74.71   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+EVENTO tiempo: 68.55   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 71.79   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 72.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
 
 -------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 79.37   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1000000100101000   payload: b'jjjjjjjjjjjjjjjjjjjj')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
 -------------------------------------------------------
 
           A CAPA 3 > paquete corrompido
 
-EVENTO tiempo: 80.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 73.07   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'#eeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 73.57   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 83.71   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 77.71   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 84.23   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 4   checksum: 0b110000100000000   payload: b' ')
+EVENTO tiempo: 78.42   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CORRUPTO
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 84.71   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 79.42   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 82.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 84.90   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 87.63   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 92.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
 
 -------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 86.83   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1000000100101000   payload: b'jjjjjjjjjjjjjjjjjjjj')
+EVENTO tiempo: 96.30   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 101.22   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -323,10 +321,37 @@ PAQUETE CORRECTO ...  MANDANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 88.72   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+EVENTO tiempo: 102.00   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 105.34   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101000011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 106.00   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 106.41   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -335,26 +360,242 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 91.62   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1100010101101110   payload: b'qqqqqqqqqqqqqqqqqqqq')
-          A CAPA 3 > paquete corrompido
+EVENTO tiempo: 110.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+          A CAPA 3 > se perdió el paquete
 
 -------------------------------------------------------
 PAQUETE ENVIADO ...
 -------------------------------------------------------
 
 
-EVENTO tiempo: 92.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 111.14   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 111.27   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 98.91   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1100010101101110   payload: b'#qqqqqqqqqqqqqqqqqqq')
+EVENTO tiempo: 116.27   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 120.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 122.63   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 126.54   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 129.08   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 130.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 130.60   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 140.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 140.41   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 142.50   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 144.07   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 146.40   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 150.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 152.15   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 154.77   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 160.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 161.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 167.04   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 168.34   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 170.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 172.94   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 175.63   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 177.46   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 180.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 183.46   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 188.54   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'#vvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -364,146 +605,32 @@ PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
 
           A CAPA 3 > se perdió el paquete
 
-EVENTO tiempo: 99.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 101.09   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 101.21   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 101.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+EVENTO tiempo: 190.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
 
 -------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 104.28   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 192.16   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 106.29   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1100010101101110   payload: b'qqqqqqqqqqqqqqqqqqqq')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 109.89   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 194.01   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 111.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+EVENTO tiempo: 194.86   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
 
 -------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 113.17   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 116.29   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1100010101101110   payload: b'qqqqqqqqqqqqqqqqqqqq')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 117.04   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110110110101   payload: b'xxxxxxxxxxxxxxxxxxxx')
-          A CAPA 3 > se perdió el paquete
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 120.73   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 126.28   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1010110111111   payload: b'yyyyyyyyyyyyyyyyyyyy')
-          A CAPA 3 > se perdió el paquete
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 135.27   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 136.28   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 139.08   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 142.19   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1010110111111   payload: b'yyyyyyyyyyyyyyyyyyyy')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -513,10 +640,25 @@ PAQUETE CORRECTO ...  MANDANDO ACK
 
           A CAPA 3 > paquete corrompido
 
-EVENTO tiempo: 143.86   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b'#')
+EVENTO tiempo: 199.39   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 200.32   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 200.75   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b'#')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -525,767 +667,7 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 146.44   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'bbbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 152.00   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'bbbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 152.81   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 156.44   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 158.48   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 160.93   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 162.21   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'bbbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 162.84   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 166.44   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 167.45   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'#bbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 172.71   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 175.95   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 176.44   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 176.92   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 181.89   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 184.98   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'bbbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 186.44   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 187.64   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 187.76   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 189.47   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1000100100110010   payload: b'kkkkkkkkkkkkkkkkkkkk')
-          A CAPA 3 > paquete corrompido
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 194.31   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b11001011011000   payload: b'bbbbbbbbbbbbbbbbbbbb')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 198.28   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 199.47   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 200.66   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 201.03   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1000100100110010   payload: b'#kkkkkkkkkkkkkkkkkkk')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 201.09   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 201.29   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 203.81   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b'#')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 207.34   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 209.47   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 210.40   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1000100100110010   payload: b'kkkkkkkkkkkkkkkkkkkk')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 216.06   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 217.47   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1000100100110010   payload: b'kkkkkkkkkkkkkkkkkkkk')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 219.47   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 220.07   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 224.75   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1000100100110010   payload: b'kkkkkkkkkkkkkkkkkkkk')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 224.95   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 230.04   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 230.72   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 231.48   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 232.85   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1101100110000010   payload: b'ssssssssssssssssssss')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 234.67   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1101100110000010   payload: b'ssssssssssssssssssss')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 235.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 238.86   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 241.30   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 242.85   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 243.16   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 247.12   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 250.53   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1110101011   payload: b'wwwwwwwwwwwwwwwwwwww')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 251.70   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1110101011   payload: b'wwwwwwwwwwwwwwwwwwww')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 256.68   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 259.49   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 260.53   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 262.83   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 270.53   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 270.97   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 273.94   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 279.42   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1110101011   payload: b'wwwwwwwwwwwwwwwwwwww')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 280.53   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 282.27   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 286.56   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1110101011   payload: b'wwwwwwwwwwwwwwwwwwww')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 288.91   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 290.20   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100010011101100   payload: b'dddddddddddddddddddd')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 291.52   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 297.14   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100010011101100   payload: b'dddddddddddddddddddd')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 300.05   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 300.20   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 305.30   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 306.28   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100010011101100   payload: b'dddddddddddddddddddd')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 310.20   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 311.20   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100010011101100   payload: b'dddddddddddddddddddd')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 312.35   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 312.68   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 314.92   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 314.92   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 318.54   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 319.89   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 320.20   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 329.17   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 330.20   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 335.97   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 340.20   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 344.16   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100010011101100   payload: b'dddddddddddddddddddd')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 345.36   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 347.09   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 353.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 206.57   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
             PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
 
 -------------------------------------------------------
@@ -1293,251 +675,10 @@ PAQUETE ENVIADO ...
 -------------------------------------------------------
 
 
-EVENTO tiempo: 361.08   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 209.45   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111011110100000   payload: b'vvvvvvvvvvvvvvvvvvvv')
 
 -------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 363.23   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 363.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 365.88   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 369.77   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 372.55   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 373.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 375.54   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 377.98   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 380.16   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 383.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 389.42   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 391.53   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 393.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 396.18   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 400.59   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 401.46   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 403.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 409.03   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 413.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 416.86   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 423.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 426.22   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 433.09   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 433.87   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 434.49   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 435.79   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 438.43   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 439.53   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 441.08   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -1546,50 +687,10 @@ SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SE
 -------------------------------------------------------
 
 
-EVENTO tiempo: 446.15   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
+EVENTO tiempo: 211.67   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-ADVERTENCIA: no se pudo cancelar el timer
-
-EVENTO tiempo: 447.97   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101100100000000   payload: b'ffffffffffffffffffff')
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 449.20   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b101100100000000   payload: b'ffffffffffffffffffff')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 449.95   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 451.29   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -1598,119 +699,10 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 452.66   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b110101100010100   payload: b'hhhhhhhhhhhhhhhhhhhh')
-          A CAPA 3 > se perdió el paquete
+EVENTO tiempo: 212.04   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1011110101100100   payload: b'pppppppppppppppppppp')
 
 -------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 460.58   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 462.66   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 468.96   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b110101100010100   payload: b'#hhhhhhhhhhhhhhhhhhh')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 470.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 471.64   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 472.66   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 476.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 480.33   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b110101100010100   payload: b'hhhhhhhhhhhhhhhhhhhh')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 482.66   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 484.03   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 485.16   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1001010100111100   payload: b'llllllllllllllllllll')
-          A CAPA 3 > se perdió el paquete
-
--------------------------------------------------------
-PAQUETE ENVIADO ...
--------------------------------------------------------
-
-
-EVENTO tiempo: 486.39   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b110101100010100   payload: b'hhhhhhhhhhhhhhhhhhhh')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -1719,99 +711,19 @@ SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SE
 -------------------------------------------------------
 
 
-EVENTO tiempo: 488.77   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 494.12   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1001110101000110   payload: b'mmmmmmmmmmmmmmmmmmmm')
-          A CAPA 3 > paquete corrompido
+EVENTO tiempo: 214.64   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1100010101101110   payload: b'qqqqqqqqqqqqqqqqqqqq')
+          A CAPA 3 > se perdió el paquete
 
 -------------------------------------------------------
 PAQUETE ENVIADO ...
 -------------------------------------------------------
 
 
-EVENTO tiempo: 501.11   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1001110101000110   payload: b'#mmmmmmmmmmmmmmmmmmm')
+EVENTO tiempo: 219.22   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 501.52   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 504.12   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > se perdió el paquete
-
-EVENTO tiempo: 510.66   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 514.12   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-
-EVENTO tiempo: 517.34   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1001110101000110   payload: b'mmmmmmmmmmmmmmmmmmmm')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRECTO ...  MANDANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 519.20   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 521.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 522.66   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -1820,71 +732,71 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 531.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 220.33   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
             PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
-          A CAPA 3 > paquete corrompido
+          A CAPA 3 > se perdió el paquete
 
 -------------------------------------------------------
 PAQUETE ENVIADO ...
 -------------------------------------------------------
 
 
-EVENTO tiempo: 540.37   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 226.83   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 541.21   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'#rrrrrrrrrrrrrrrrrrr')
+EVENTO tiempo: 229.96   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 541.38   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+EVENTO tiempo: 230.33   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 235.53   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 239.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 240.33   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
 
 -------------------------------------------------------
 SE ACABO EL TIEMPO ... PAQUETE REENVIADO
 -------------------------------------------------------
 
 
-EVENTO tiempo: 542.21   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
-
--------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
--------------------------------------------------------
-
-
--------------------------------------------------------
-SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
--------------------------------------------------------
-
-
-EVENTO tiempo: 543.81   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 242.94   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 546.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 244.89   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
 
 -------------------------------------------------------
-PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
--------------------------------------------------------
-
-
-EVENTO tiempo: 551.17   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
+RECIBIENDO PAQUETE DE ALICIA
 -------------------------------------------------------
 
 
@@ -1893,37 +805,32 @@ PAQUETE CORRECTO ...  MANDANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 551.38   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
-
--------------------------------------------------------
-SE ACABO EL TIEMPO ... PAQUETE REENVIADO
--------------------------------------------------------
-
-          A CAPA 3 > paquete corrompido
-
-EVENTO tiempo: 555.14   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 8   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
-
--------------------------------------------------------
-PAQUETE RECIBIDO
--------------------------------------------------------
-
-
--------------------------------------------------------
-PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
--------------------------------------------------------
-
-
-EVENTO tiempo: 556.11   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+EVENTO tiempo: 247.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
 
 -------------------------------------------------------
 PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 557.72   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+EVENTO tiempo: 250.33   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
 
 -------------------------------------------------------
-RECIBIENDO PAQUETE DEL RECEPTOR
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 251.47   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 252.63   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
 -------------------------------------------------------
 
 
@@ -1932,12 +839,947 @@ SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
 -------------------------------------------------------
 
 
-EVENTO tiempo: 558.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
-            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b110101011   payload: b'wwwwwwwwwwwwwwwwwwww')
+EVENTO tiempo: 253.85   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
           A CAPA 3 > se perdió el paquete
 
 -------------------------------------------------------
 PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 256.84   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 258.03   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1101000101111000   payload: b'rrrrrrrrrrrrrrrrrrrr')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 258.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 259.69   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 263.85   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 267.76   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 267.85   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1111111001001   payload: b'#zzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 269.57   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b100011011101100   payload: b'dddddddddddddddddddd')
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 273.48   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b100011011101100   payload: b'dddddddddddddddddddd')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 274.84   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 276.37   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+          A CAPA 3 > se perdió el paquete
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 278.39   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 281.50   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b'#')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 282.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 286.37   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 287.02   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 291.71   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 295.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 295.87   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'#eeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 296.37   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 297.44   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 302.12   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 302.66   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 303.13   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 303.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 306.37   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b100111011110110   payload: b'eeeeeeeeeeeeeeeeeeee')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 307.62   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 312.91   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 316.09   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 317.95   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 320.23   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 320.52   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+          A CAPA 3 > paquete corrompido
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 323.98   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'#ppppppppppppppppppp')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 326.65   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 1   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 327.27   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 330.03   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 330.52   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 335.55   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 335.58   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 337.62   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 8   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE CORRUPTO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 338.38   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 340.52   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 342.75   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 343.81   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 347.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 350.52   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 354.15   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 357.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 358.16   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 360.52   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 361.35   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 362.62   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 363.32   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 363.41   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b1011101101100100   payload: b'pppppppppppppppppppp')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 367.19   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 369.45   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 372.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 373.73   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 382.55   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 382.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 389.78   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'#zzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 391.30   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 392.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 397.56   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 399.34   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 400.12   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 402.23   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 402.62   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b10000111001001   payload: b'zzzzzzzzzzzzzzzzzzzz')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 407.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 408.86   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b110000100000000   payload: b'#')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 416.59   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
+          A CAPA 3 > se perdió el paquete
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 419.31   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 426.59   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 428.29   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 429.35   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 432.74   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 432.80   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 436.59   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 437.70   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b101111100000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE DE CONFIRMACION ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 439.46   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 0   num_ack: 0   checksum: 0b111010100011110   payload: b'iiiiiiiiiiiiiiiiiiii')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 440.76   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+          A CAPA 3 > paquete corrompido
+
+-------------------------------------------------------
+PAQUETE ENVIADO ...
+-------------------------------------------------------
+
+
+EVENTO tiempo: 443.00   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'#nnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 449.83   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 450.76   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 451.08   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 453.81   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 456.15   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+          A CAPA 3 > se perdió el paquete
+
+EVENTO tiempo: 456.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 457.17   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 460.76   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 461.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 467.63   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'#nnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 470.65   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 470.76   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+          A CAPA 3 > paquete corrompido
+
+EVENTO tiempo: 470.87   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 472.44   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'#nnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 477.04   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b'#')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 480.70   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 480.76   tipo: INTERRUP_TIMER   entidad: ALICIA   paquete: None
+            PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+SE ACABO EL TIEMPO ... PAQUETE REENVIADO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 481.00   tipo: DESDE_CAPA_3   entidad: ALICIA   paquete: PAQUETE (num_secuencia: 1   num_ack: 0   checksum: 0b110000000000000   payload: b' ')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE BARTOLO
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+SE RECIBIO UN ACK CON NUMERO DE SECUENCIA INVERTIDO
+-------------------------------------------------------
+
+
+EVENTO tiempo: 483.15   tipo: DESDE_CAPA_3   entidad: BARTOLO   paquete: PAQUETE (num_secuencia: 1   num_ack: 1   checksum: 0b1010100101010000   payload: b'nnnnnnnnnnnnnnnnnnnn')
+
+-------------------------------------------------------
+RECIBIENDO PAQUETE DE ALICIA
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+PAQUETE CORRECTO ...  MANDANDO ACK
+-------------------------------------------------------
+
+
+EVENTO tiempo: 485.54   tipo: DESDE_CAPA_5   entidad: ALICIA   paquete: None
+
+-------------------------------------------------------
+PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK
 -------------------------------------------------------
 
 

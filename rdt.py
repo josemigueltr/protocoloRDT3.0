@@ -113,6 +113,7 @@ def A_entrada(paquete):
 
 def A_interrup_timer():
     #Si se acabo el tiempo del timer volvemos a inicializarlo y reenviamos el ultimo paquete
+    print(f'            {a.ultimo_paquete}')
     print("\n-------------------------------------------------------")
     print(f"SE ACABO EL TIEMPO ... PAQUETE REENVIADO")
     print("-------------------------------------------------------\n")
