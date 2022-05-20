@@ -11,8 +11,8 @@ num_paq_perdidos = 0
 num_paq_corromp = 0
 num_paq_acapa3 = 0
 time = 0.0
-tiempo_mensajes = 1.0
-total_mensajes = 20
+tiempo_mensajes = 5.0
+total_mensajes = 100
 eventos = []
 secuencia=0
 
@@ -49,17 +49,23 @@ def A_salida(mensaje):
         a.estado = 'ESPERANDO_ACK'
         a.ultimo_paquete = paquete
         a_capa_3(Entidad.ALICIA, paquete)
-        startimer(Entidad.ALICIA, tiempo_mensajes)
+        startimer(Entidad.ALICIA, 10)
         print("\n-------------------------------------------------------")
         print(f"PAQUETE ENVIADO ...")
         print("-------------------------------------------------------\n")
+    else:
+        print("\n-------------------------------------------------------")
+        print(f"PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK")
+        print("-------------------------------------------------------\n")
+
+    
 
 def A_entrada(paquete):
     global secuencia
-    #REvisamos que le paquete recibido este correcto
-    print('########################')
-    print(paquete)
-    print('########################')
+    print("\n-------------------------------------------------------")
+    print(f"RECIBIENDO PAQUETE DEL RECEPTOR")
+    print("-------------------------------------------------------\n")
+
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
         #El numero de secuencia es distinto o es duplicado
         if paquete.num_ack !=secuencia:
@@ -83,8 +89,11 @@ def A_entrada(paquete):
 
 def A_interrup_timer():
     #Si se acabo el tiempo del timer volvemos a inicializarlo y a esperar
+    print("\n-------------------------------------------------------")
+    print(f"SE ACABO EL TIEMPO ... PAQUETE REENVIADO")
+    print("-------------------------------------------------------\n")
     a_capa_3(Entidad.ALICIA, a.ultimo_paquete)
-    startimer(Entidad.ALICIA, tiempo_mensajes)
+    startimer(Entidad.ALICIA, 10)
 
 
 def A_init():
