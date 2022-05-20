@@ -5,7 +5,9 @@ from random import randint, random
 from enum import Enum
 
 verbose = 2
+#Porcentaje de que los paquetes se pierdan
 proba_perdida = 0.3
+#Probabilidad de que los paquetes se corrompan
 proba_corrup = 0.2
 num_paq_perdidos = 0
 num_paq_corromp = 0
@@ -18,6 +20,10 @@ secuencia=0
 
 
 def get_checksum(payload, num_ack, num_secuencia):
+    """
+        Funcion que calcula el checksum de un paquete
+        para corroborar si se ha corrompido durante la transmisión
+    """
     payload = payload.decode(encoding='UTF-8')
     l = len(payload)
     #Hacemos que la longitud de la cadena sea multiplo de 2
@@ -35,26 +41,38 @@ def get_checksum(payload, num_ack, num_secuencia):
 
 
 class Alicia():
+    """
+        Clase para representar a Alicia la emisora
+        posee un estado y un ultimo paquete
+    """
     def __init__(self, estado,  ultimo_paquete):
         self.estado = estado
         self.ultimo_paquete = ultimo_paquete
 
 
 def A_salida(mensaje):
+    """
+        Funcion que se encarga de mandar un paquete a Bartolo
+        :param mensaje: mensaje a enviar 
+    """
+    #Secuencia que indica cual es el bit actual que se manejara en paquete
     global secuencia
     #Si no se esta esperando nada  mandamos el mensaje
     if a.estado != 'ESPERANDO_ACK':
+        #Creamos el paquete
         paquete = Paquete(num_secuencia=secuencia, num_ack=secuencia, checksum=get_checksum(mensaje.datos, num_ack=secuencia, num_secuencia=secuencia), payload=mensaje.datos)
         print(f'            {paquete}')
         #Actualizo es estado de Alicia
         a.estado = 'ESPERANDO_ACK'
-        a.ultimo_paquete = paquete
+        #Actualizo el ultimo paquete para enviarlo en los reenvios
+        a.ultimo_paquete = copy.deepcopy(paquete)
         a_capa_3(Entidad.ALICIA, paquete)
         startimer(Entidad.ALICIA, 10)
         print("\n-------------------------------------------------------")
         print(f"PAQUETE ENVIADO ...")
         print("-------------------------------------------------------\n")
     else:
+        #Se esta esperando un mensaje de confirmacion ack asi que se ignoran paquetes
         print("\n-------------------------------------------------------")
         print(f"PAQUETE NO ENVIADO ... SE ESTA ESPERANDO ACK")
         print("-------------------------------------------------------\n")
@@ -62,11 +80,15 @@ def A_salida(mensaje):
     
 
 def A_entrada(paquete):
+    """
+        Funcion que se encarga de manejar los paquetes que llegan a Alicia
+        :param paquete: paquete que llega a Alicia
+    """
     global secuencia
     print("\n-------------------------------------------------------")
-    print(f"RECIBIENDO PAQUETE DEL RECEPTOR")
+    print(f"RECIBIENDO PAQUETE DE BARTOLO")
     print("-------------------------------------------------------\n")
-
+    #Revisamos que el paquete no se haya corrompido
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
         #El numero de secuencia es distinto o es duplicado
         if paquete.num_ack !=secuencia:
@@ -79,6 +101,7 @@ def A_entrada(paquete):
             print("\n-------------------------------------------------------")
             print("SE RECIBIO UN PAQUETE DE CONFIRMACION ACK")
             print("-------------------------------------------------------\n")
+            #Actualizamos el numero de secuencia y el estado de Alicia
             a.estado = 'ESPERANDO_LLAMADA'
             secuencia = (secuencia + 1 ) % 2
             stoptimer(Entidad.ALICIA)
@@ -89,7 +112,7 @@ def A_entrada(paquete):
         print("-------------------------------------------------------\n")
 
 def A_interrup_timer():
-    #Si se acabo el tiempo del timer volvemos a inicializarlo y a esperar
+    #Si se acabo el tiempo del timer volvemos a inicializarlo y reenviamos el ultimo paquete
     print("\n-------------------------------------------------------")
     print(f"SE ACABO EL TIEMPO ... PAQUETE REENVIADO")
     print("-------------------------------------------------------\n")
@@ -98,12 +121,19 @@ def A_interrup_timer():
 
 
 def A_init():
+    """
+        Funcion que se encarga de inicializar a Alicia
+    """
     return Alicia(estado='ESPERANDO_LLAMADA', ultimo_paquete=None)
 
 def B_entrada(paquete):
+    """
+        Funcion que se encarga de manejar los paquetes que llegan a Bartolo
+        :param paquete: paquete que llega a Bartolo  
+    """
     global secuencia
     print("\n-------------------------------------------------------")
-    print(f"PAQUETE RECIBIDO")
+    print(f"RECIBIENDO PAQUETE DE ALICIA")
     print("-------------------------------------------------------\n")
     #Revisamos que el paquete halla llegado bien 
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
@@ -112,6 +142,7 @@ def B_entrada(paquete):
             print("\n-------------------------------------------------------")
             print("SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO")
             print("-------------------------------------------------------\n")
+            #Si el numero de secuencia del paquete es incorrecto enviamos un ack con el numero de secuencia contrario
             num_nack=1 if paquete.num_ack ==0 else 0
             p_nack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=num_nack, checksum=get_checksum(b' ', num_ack=num_nack, num_secuencia=paquete.num_secuencia), payload=b' ')
             a_capa_3(Entidad.BARTOLO, p_nack)
@@ -119,12 +150,12 @@ def B_entrada(paquete):
         print("\n-------------------------------------------------------")    
         print(f"PAQUETE CORRECTO ...  MANDANDO ACK" )
         print("-------------------------------------------------------\n")
-        #mandamos un ack
+        #Si el paquete es correcto mandamos un mensaje de confirmacion ack
         p_ack = Paquete(num_secuencia=paquete.num_secuencia, num_ack=paquete.num_ack, checksum=get_checksum(b' ', num_ack=paquete.num_ack, num_secuencia=paquete.num_secuencia), payload=b' ')
         a_capa_3(Entidad.BARTOLO, p_ack)
         a_capa_5(Entidad.BARTOLO, Mensaje(paquete.payload))
     else:
-        #Mandamos un ack con el numero de secuencia contrario si el paquete es corrupto
+        #Si el paquete esta corrupto mandamos un ack con el numero de secuencia contrario 
         print("\n-------------------------------------------------------")
         print("PAQUETE CORRUPTO ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO")
         print("-------------------------------------------------------\n")
