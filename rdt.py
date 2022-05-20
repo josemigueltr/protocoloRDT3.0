@@ -13,7 +13,7 @@ num_paq_perdidos = 0
 num_paq_corromp = 0
 num_paq_acapa3 = 0
 time = 0.0
-tiempo_mensajes = 5.0
+tiempo_mensajes = 1.0
 total_mensajes = 100
 eventos = []
 secuencia=0
@@ -139,7 +139,7 @@ def B_entrada(paquete):
     #Revisamos que el paquete halla llegado bien 
     if paquete.checksum == get_checksum(paquete.payload, paquete.num_ack, paquete.num_secuencia):
         #Revisamos que la secuencia del paquete sea la correcta(duplicado)
-        if paquete.num_secuencia != secuencia:
+        if paquete.num_ack != secuencia:
             print("\n-------------------------------------------------------")
             print("SE RECIBIO UN PAQUETE CON SECUENCIA INCORRECTA ... MANDANDO ACK CON NUMERO DE SECUENCIA CONTRARIO")
             print("-------------------------------------------------------\n")
