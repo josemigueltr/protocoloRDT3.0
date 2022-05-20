@@ -45,6 +45,7 @@ def A_salida(mensaje):
     #Si no se esta esperando nada  mandamos el mensaje
     if a.estado != 'ESPERANDO_ACK':
         paquete = Paquete(num_secuencia=secuencia, num_ack=secuencia, checksum=get_checksum(mensaje.datos, num_ack=secuencia, num_secuencia=secuencia), payload=mensaje.datos)
+        print(f'            {paquete}')
         #Actualizo es estado de Alicia
         a.estado = 'ESPERANDO_ACK'
         a.ultimo_paquete = paquete
